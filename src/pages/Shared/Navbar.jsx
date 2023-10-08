@@ -1,10 +1,12 @@
 import { useContext } from "react";
-import { NavLink, useLocation } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
+import userLogo from "../../assets/user.png"
 
 const Navbar = () => {
     const location = useLocation();
     const { user, logout } = useContext(AuthContext);
+    const photo = user && user?.photoURL ? user.photoURL : userLogo;
     const navLinks = (
         <>
             <li>
@@ -59,12 +61,14 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <img src="" alt="" />
-                    <p>{user?.displayName}</p>
-                    <a className="btn" onClick={() => {
+                    <img src={user && photo} alt="" className="rounded-full w-10 mr-2"/>
+                    <p className="mr-2">{user?.displayName}</p>
+                    {user ? <a className="btn" onClick={() => {
                         logout()
                         .catch(e => console.log(e.code))
-                    }}>Logout</a>
+                    }}>Logout</a> :
+                    <Link className="btn" to={"/login"}>Login</Link>
+                    }
                 </div>
             </div>
         </div>

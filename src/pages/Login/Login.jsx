@@ -5,10 +5,10 @@ import { toast } from "react-toastify";
 
 const Login = () => {
     
-    const { user, login } = useContext(AuthContext);
+    const { user, loading, login, googleLogin } = useContext(AuthContext);
     const navigate = useNavigate();
 
-    // if(user) navigate("/");
+    // if(!loading && user) navigate("/");
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -23,6 +23,14 @@ const Login = () => {
             })
             .catch(error => {
                 if(error.code === "auth/invalid-login-credentials") toast("Invalid email or password!");
+            });
+    }
+
+    const handleGoogleLogin = () => {
+        googleLogin()
+            .then(() => {
+                toast("Successfully logged in!");
+                navigate("/");
             });
     }
     
@@ -69,6 +77,8 @@ const Login = () => {
                         <div className="form-control mt-6">
                             <button className="btn btn-neutral">Login</button>
                         </div>
+                        <h3 className="text-center my-2 text-sm">Or</h3>
+                        <a className="btn btn-neutral" onClick={handleGoogleLogin}>Login with Google</a>
                         <p className="text-xs">Don't have an account? <Link to={"/register"} className="text-red-500">Register</Link></p>
                     </form>
                 </div>
