@@ -1,0 +1,45 @@
+[
+    {
+      "id": 1,
+      "title": "Gaming Tournament Package",
+      "description": "Experience the thrill of competitive gaming with our Gaming Tournament Package. Join the battle against skilled players, win exciting prizes, and show off your gaming skills.",
+      "price": 49.99,
+      "image": "https://example.com/images/tournament.jpg"
+    },
+    {
+      "id": 2,
+      "title": "LAN Party Hosting",
+      "description": "Host your own LAN party with friends and fellow gamers. Enjoy uninterrupted gaming sessions, high-speed internet, and comfortable gaming setups.",
+      "price": 29.99,
+      "image": "https://example.com/images/lanparty.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Game Developers Workshop",
+      "description": "Learn game development from industry experts. Join our workshop to master game design, coding, and 3D modeling. Bring your game ideas to life!",
+      "price": 79.99,
+      "image": "https://example.com/images/workshop.jpg"
+    },
+    {
+      "id": 4,
+      "title": "VIP Gamer Pass",
+      "description": "Get the VIP treatment at our gaming events. Enjoy exclusive access, premium seating, meet-and-greets with pro gamers, and swag bags filled with gaming goodies.",
+      "price": 99.99,
+      "image": "https://example.com/images/vip_pass.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Online Gaming Community Membership",
+      "description": "Join our online gaming community and connect with fellow gamers worldwide. Access exclusive forums, in-game events, and gaming news.",
+      "price": 19.99,
+      "image": "https://example.com/images/online_community.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Game Streaming Workshop",
+      "description": "Learn the art of game streaming and build your own gaming audience. Our workshop covers streaming platforms, equipment setup, and audience engagement strategies.",
+      "price": 59.99,
+      "image": "https://example.com/images/streaming_workshop.jpg"
+    }
+  ]
+  
