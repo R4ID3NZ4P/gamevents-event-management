@@ -63,11 +63,11 @@ const Navbar = () => {
                 <div className="navbar-end">
                     <img src={user && photo} alt="" className="rounded-full w-10 mr-2"/>
                     <p className="mr-2">{user?.displayName}</p>
-                    {user ? <a className="btn" onClick={() => {
+                    {user ? <a className="btn btn-sm" onClick={() => {
                         logout()
                         .catch(e => console.log(e.code))
                     }}>Logout</a> :
-                    <Link className="btn" to={"/login"}>Login</Link>
+                    <Link className="btn btn-sm" to={"/login"}>Login</Link>
                     }
                 </div>
             </div>

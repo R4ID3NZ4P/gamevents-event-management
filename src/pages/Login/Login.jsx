@@ -8,8 +8,6 @@ const Login = () => {
     const { user, loading, login, googleLogin } = useContext(AuthContext);
     const navigate = useNavigate();
 
-    // if(!loading && user) navigate("/");
-
     const handleSubmit = (e) => {
         e.preventDefault();
         const email = e.target.email.value;
