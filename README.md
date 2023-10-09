@@ -1,8 +1,14 @@
-# React + Vite
+# Gamevents
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+#### The page is live [here](https://gaming-event-management.web.app/)
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This simple website offers but not limited to the following features:
+
+* User Authentication using Email and Password and Google Account.
+* Private routes only available to logged in users.
+* Password checker to check if the password is less than 6 characters, don't have a capital letter or,  don't have a special character.
+* Responsiveness for Mobile, Tablet and Desktop devices.
+* Have AOS integrated for better user experience.
+
