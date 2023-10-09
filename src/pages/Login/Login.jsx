@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import { toast } from "react-toastify";
 
@@ -7,6 +7,7 @@ const Login = () => {
     
     const { user, loading, login, googleLogin } = useContext(AuthContext);
     const navigate = useNavigate();
+    const location = useLocation();
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -17,7 +18,8 @@ const Login = () => {
         login(email, password)
             .then(() => {
                 toast("Successfully logged in!");
-                navigate("/");
+                if(location.state) navigate(location.state)
+                else navigate("/");
             })
             .catch(error => {
                 if(error.code === "auth/invalid-login-credentials") toast("Invalid email or password!");

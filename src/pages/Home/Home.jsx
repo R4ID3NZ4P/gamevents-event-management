@@ -1,5 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 import ServiceCard from "./ServiceCard";
+import WhyChooseUs from "./WhyChooseUs";
+import FAQ from "./FAQ";
 
 const Home = () => {
     const data = useLoaderData();
@@ -13,6 +15,8 @@ const Home = () => {
                     {data.map(card => <ServiceCard key={card.id} data={card}></ServiceCard>)}
                 </div>
             </div>
+            <WhyChooseUs></WhyChooseUs>
+            <FAQ></FAQ>
         </div>
     );
 };
