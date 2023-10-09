@@ -11,7 +11,7 @@ const Card = ( { data } ) => {
                 <img
                     src={image}
                     alt="Movie"
-                    className="w-60"
+                    className="w-50 md:w-60"
                 />
             </figure>
             <div className="card-body">
