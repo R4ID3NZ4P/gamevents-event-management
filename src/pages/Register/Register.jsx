@@ -39,7 +39,6 @@ const Register = () => {
             .catch((error) => {
                 if(error.code === "auth/email-already-in-use") toast("User already exists!");
             });
-        console.log(email, password);
     };
 
     const handleGoogleLogin = () => {
