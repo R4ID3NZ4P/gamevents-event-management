@@ -5,11 +5,14 @@ import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import PrivateRoute from "./PrivateRoute";
 import ServiceDetails from "../pages/ServiceDetails/ServiceDetails"
+import Profile from "../pages/Profile/Profile";
+import Error from "../pages/Error/Error";
 
 const router = createBrowserRouter([
     {
         path: "/",
         element: <Root></Root>,
+        errorElement: <Error></Error>,
         children: [
             {
                 path: "/",
@@ -28,6 +31,10 @@ const router = createBrowserRouter([
                 path: "/service/:id",
                 element: <PrivateRoute><ServiceDetails></ServiceDetails></PrivateRoute>,
                 loader: () => fetch("/data.json")
+            },
+            {
+                path: "/profile",
+                element: <PrivateRoute><Profile></Profile></PrivateRoute>
             }
         ]
     }
