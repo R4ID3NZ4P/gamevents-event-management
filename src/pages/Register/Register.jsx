@@ -8,7 +8,7 @@ import app from "../../firebase/firebase.config";
 const auth = getAuth(app);
 
 const Register = () => {
-    const { register } = useContext(AuthContext);
+    const { register, googleLogin, update } = useContext(AuthContext);
     const navigate = useNavigate();
 
     const handleSubmit = (e) => {
@@ -37,16 +37,22 @@ const Register = () => {
         else register(email, password)
             .then(() => {
                 toast("User successfully registered!");
-                updateProfile(auth.currentUser, {
-                    displayName: name
-                  });
-                navigate("/");
+                update(name).then(() => navigate("/"));
+                  
             })
             .catch((error) => {
                 if(error.code === "auth/email-already-in-use") toast("User already exists!");
             });
         console.log(email, password);
     };
+
+    const handleGoogleLogin = () => {
+        googleLogin()
+            .then(() => {
+                toast("Successfully logged in!");
+                navigate("/");
+            });
+    }
 
     return (
         <div className="hero min-h-screen">
@@ -97,6 +103,8 @@ const Register = () => {
                                 Register
                             </button>
                         </div>
+                        <h3 className="text-center my-2 text-sm">Or</h3>
+                        <a className="btn btn-neutral" onClick={handleGoogleLogin}>Login with Google</a>
                         <p className="text-xs">
                             Already have an account?{" "}
                             <Link to={"/login"} className="text-red-500">

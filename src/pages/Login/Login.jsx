@@ -5,7 +5,7 @@ import { toast } from "react-toastify";
 
 const Login = () => {
     
-    const { user, loading, login, googleLogin } = useContext(AuthContext);
+    const { login, googleLogin } = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
 
@@ -79,7 +79,7 @@ const Login = () => {
                         </div>
                         <h3 className="text-center my-2 text-sm">Or</h3>
                         <a className="btn btn-neutral" onClick={handleGoogleLogin}>Login with Google</a>
-                        <p className="text-xs">Don't have an account? <Link to={"/register"} className="text-red-500">Register</Link></p>
+                        <p className="text-xs">Don&apos;t have an account? <Link to={"/register"} className="text-red-500">Register</Link></p>
                     </form>
                 </div>
             </div>
