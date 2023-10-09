@@ -16,7 +16,7 @@ const FAQ = () => {
                         A comfortable chair if you have one.
                         Snacks and drinks (some events may have food vendors too).
                         Your ticket or registration confirmation (digital or printed).
-                        Don't forget to check the specific event details for any additional requirements or recommendations.</p>
+                        Don&apos;t forget to check the specific event details for any additional requirements or recommendations.</p>
                 </div>
             </div>
             <div className="collapse collapse-arrow join-item border border-base-300">
@@ -25,7 +25,7 @@ const FAQ = () => {
                     Are your gaming events suitable for all skill levels?
                 </div>
                 <div className="collapse-content">
-                    <p>Answer: Absolutely! We cater to gamers of all skill levels, from beginners to seasoned pros. Our events are designed to be inclusive, offering a variety of activities and competitions to suit everyone's gaming interests. Whether you're looking for casual fun, competitive challenges, or educational workshops, you'll find something for you at our gaming events. Plus, our community is friendly and welcoming, so don't hesitate to join us, no matter your skill level!</p>
+                    <p>Answer: Absolutely! We cater to gamers of all skill levels, from beginners to seasoned pros. Our events are designed to be inclusive, offering a variety of activities and competitions to suit everyone&apos;s gaming interests. Whether you&apos;re looking for casual fun, competitive challenges, or educational workshops, you&apos;ll find something for you at our gaming events. Plus, our community is friendly and welcoming, so don&apos;t hesitate to join us, no matter your skill level!</p>
                 </div>
             </div>
             <div className="collapse collapse-arrow join-item border border-base-300">

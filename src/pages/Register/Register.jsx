@@ -2,10 +2,6 @@ import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import { toast } from "react-toastify";
-import { getAuth, updateProfile } from "firebase/auth";
-import app from "../../firebase/firebase.config";
-
-const auth = getAuth(app);
 
 const Register = () => {
     const { register, googleLogin, update } = useContext(AuthContext);
